@@ -200,16 +200,12 @@ li
 .sideFloating
 {
     background-color: rgb(27, 49, 97);
-    height:825px;
     position: fixed;
     z-index:200;
     width:150px;
     display:none;
 }
-@media(min-height:0px) and (max-height:200px)
-{
-    
-}
+
 @media (min-width:0px) and (max-width:800px)
 {
     .OtherSide
@@ -219,7 +215,7 @@ li
 
     .navBar{
        display:block;
-       width:10px;
+       width:50px;
        height:50px;
        display: flex;
        flex-direction: column;
@@ -249,7 +245,7 @@ li
         object-position: center;
     }
 
-  
+ 
     .navBar div:first-of-type
     {
           position: absolute;
@@ -298,7 +294,7 @@ li
   
     .sideFloating
     {
-        height:900px;
+       
     }
 
 }
