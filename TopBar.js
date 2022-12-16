@@ -3,10 +3,10 @@
 
 $(function(){
 
-
-$(window).bind('resize', function()  //resize the windows
+$(window).resize(function()  //all i had to do was use this. Use $(window) tag :)
 {
-    location.reload();
+    GenerateFloating();
+
 })
 
 $("#navbar1, #navbar2, #navbar3").hover(function()  //if hover execute the first one, otherwise the second one
@@ -18,14 +18,21 @@ $("#navbar1, #navbar2, #navbar3").hover(function()  //if hover execute the first
       $(this).css("background-color", "white");  //iif not hover
 });
 
-var Height= $(".TopBar").offset().left + $(".TopBar").height();
-var BottomHeight= $(".footer-box").offset().top;
+$("#navBar").click(function()
+{
+   $(".sideFloating").toggle();  //THIS IS WOW! it toggles between hide nad show
+});
 
-console.log(Height);
-console.log(BottomHeight);
-var ActualHeight= BottomHeight-Height;
-console.log(ActualHeight);
-$(".sideFloating").css("top", Height);
-$(".sideFloating").height(ActualHeight);
+GenerateFloating();
+
 
 });
+
+function GenerateFloating()
+{
+    var Height= $(".TopBar").offset().left + $(".TopBar").height();
+    var BottomHeight= $(".footer-box").offset().top; 
+    var ActualHeight= BottomHeight-Height;
+    $(".sideFloating").css("top", Height);
+    $(".sideFloating").height(ActualHeight);
+}

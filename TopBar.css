@@ -219,7 +219,7 @@ li
        height:50px;
        display: flex;
        flex-direction: column;
-       cursor: pointer;
+   
        
 
     }
@@ -246,7 +246,7 @@ li
     }
 
  
-    .navBar div:first-of-type
+    #navbar1
     {
           position: absolute;
           top:20px;
@@ -255,8 +255,9 @@ li
           background-color: white;
           margin-left:10px;
           z-index: 300;
+          cursor: pointer;
     }
-    .navBar div:nth-child(2)
+    #navbar2
     {
         position: absolute;
         top:25px;
@@ -265,9 +266,10 @@ li
         background-color: white;
         margin-left:10px;
         z-index: 300;
+        cursor: pointer;
     
     }
-    .navBar div:nth-child(3)
+    #navbar3
     {
         position: absolute;
         top:29.3px;
@@ -276,25 +278,33 @@ li
         background-color: white;
         margin-left:10px;
         z-index: 300;
+        cursor: pointer;
     }
     .backgroundetails 
     {
        visibility:hidden;
     }
 
-    .navBar:hover .sideFloating
-    {
-         display: block;
-    }
     
     .TopBar
     {
         justify-content: flex-end;
     }
-  
+
     .sideFloating
     {
+        color:white;
+        text-align: center;
+
        
     }
+
+    .sideFloating div
+    {
+        margin-top:10px;
+        padding:5px;
+        cursor: pointer;
+    }
+  
 
 }
